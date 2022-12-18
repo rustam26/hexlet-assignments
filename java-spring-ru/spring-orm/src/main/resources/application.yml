@@ -1,0 +1,22 @@
+server:
+  port: ${PORT:5000}
+
+logging:
+  level:
+    root: INFO
+
+spring:
+  datasource:
+    url: jdbc:h2:./hexlet
+    username: sa
+    password:
+
+  liquibase:
+    change-log: classpath:db/changelog/changelog-master.xml
+
+  h2:
+    console:
+      enabled: true
+      path: /h2console/
+      settings:
+        web-allow-others: true
