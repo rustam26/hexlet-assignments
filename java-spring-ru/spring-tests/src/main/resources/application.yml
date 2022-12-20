@@ -1,0 +1,28 @@
+server:
+  port: ${PORT:5000}
+
+logging:
+  level:
+    root: INFO
+
+spring:
+  # Настраиваем подключение к базе данных
+  datasource:
+    url: jdbc:h2:./hexlet
+    username: sa
+    password:
+  jpa:
+    show-sql: true
+
+  # Указываем путь к основному файлу миграции
+  liquibase:
+    change-log: classpath:db/changelog/changelog-master.xml
+  # Настраиваем консоль Н2
+  # Это позволит нам открыть её в браузере по указанному пути
+  h2:
+    console:
+      enabled: true
+      # Указываем путь, по которому будет окрываться консоль
+      path: /h2console/
+      settings:
+        web-allow-others: true
