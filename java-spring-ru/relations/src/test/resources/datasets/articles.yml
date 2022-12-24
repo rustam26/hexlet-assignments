@@ -1,0 +1,37 @@
+category:
+  - id: 1
+    name: Sport
+  - id: 2
+    name: Pets
+  - id: 3
+    name: Cinema
+  - id: 4
+    name: Trips
+  - id: 5
+    name: Other
+
+article:
+  - id: 1
+    name: The Moving Toyshop
+    body: Why is it that when one man builds a wall
+    category_id: 1
+
+  - id: 2
+    name: Death Be Not Proud
+    body: Laughter is poison to fear
+    category_id: 2
+
+  - id: 3
+    name: Dying of the Light
+    body: Give me honorable enemies rather than ambitious ones, and I`ll sleep more easily by night.
+    category_id: 3
+
+  - id: 4
+    name: The Monkey`s Raincoat
+    body: Do the dead frighten you?
+    category_id: 4
+
+  - id: 5
+    name: The World, the Flesh and the Devil
+    body: When the snows fall and the white winds blow, the lone wolf dies but the pack survives
+    category_id: 5
