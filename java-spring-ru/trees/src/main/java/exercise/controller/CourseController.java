@@ -29,7 +29,7 @@ public class CourseController {
     }
 
     // BEGIN
-    @GetMapping(path = "{id}/previous/")
+    @GetMapping(path = "{id}/previous")
     public Iterable<Course> getAllCoursesById(@PathVariable("id") long id) {
         Course course = courseRepository.findById(id);
         String path = course.getPath();
