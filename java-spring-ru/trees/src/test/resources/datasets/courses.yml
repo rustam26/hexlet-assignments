@@ -1,0 +1,35 @@
+courses:
+  - id: 1
+    title: Introduction to programming
+    description: Learn about programming basics
+    path: null
+
+  - id: 2
+    title: Arrays
+    description: Learn about arrays
+    path: '1'
+
+  - id: 3
+    title: CLI Basics
+    description: Learn to use command line
+    path: null
+
+  - id: 4
+    title: Objects
+    description: Learn about objects
+    path: '1.2'
+
+  - id: 5
+    title: Functions
+    description: Learn to use functions
+    path: '1.2.4'
+
+  - id: 6
+    title: Testing
+    description: Learn how to test your code
+    path: '1.2.4.5'
+
+  - id: 7
+    title: Advanced Testing
+    description: Learn how to test real applications
+    path: '1.2.4.5.6'
