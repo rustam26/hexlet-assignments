@@ -1,0 +1,17 @@
+users:
+  - id: 1
+    first_name: John
+    last_name: Smith
+    email: john@gmail.com
+  - id: 2
+    first_name: Jack
+    last_name: Doe
+    email: doe@yahoo.com
+  - id: 3
+    first_name: Jassica
+    last_name: Simpson
+    email: simp@gmail.com
+  - id: 4
+    first_name: Robert
+    last_name: Lock
+    email: loc@loc.com

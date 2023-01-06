@@ -1,0 +1,8 @@
+# Фрагмент файла application.yml
+
+# Конфигурируем библиотеку springdoc
+# По умолчанию страница swgger ui открывается по адресу http://server:port/context-path/swagger-ui.html
+# Если нам нужно указать другой адрес, можно сделать это в файле application.yml
+springdoc:
+  swagger-ui:
+    path: /path
