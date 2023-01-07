@@ -31,13 +31,13 @@ public class CommentController {
     // BEGIN
     @GetMapping("/{postId}/comments")
     public Iterable<Comment> getAllCommentsByPostId(@PathVariable("postId") Long postId) {
-        return commentRepository.findAllByPost_Id(postId);
+        return commentRepository.findAllByPostId(postId);
     }
 
     @GetMapping("/{postId}/comments/{commentId}")
     public Comment getCommentByCommentIdAndPostId(@PathVariable("postId") Long postId,
                                                   @PathVariable("commentId") Long commentId) {
-        return commentRepository.findByIdAndPost_Id(commentId, postId)
+        return commentRepository.findByIdAndPostId(commentId, postId)
                 .orElseThrow(() -> new ResourceNotFoundException("comment" + commentId + "not found"));
     }
 
@@ -47,24 +47,24 @@ public class CommentController {
                 .orElseThrow(() -> new ResourceNotFoundException("post" + postId + "not found"));
         comment.setPost(post);
         commentRepository.save(comment);
-        return commentRepository.findAllByPost_Id(postId);
+        return commentRepository.findAllByPostId(postId);
     }
 
     @PatchMapping("/{postId}/comments/{commentId}")
     public Iterable<Comment> updateComment(@RequestBody Comment comment,
                                            @PathVariable Long postId,
                                            @PathVariable Long commentId) {
-        Comment commentOld = commentRepository.findByIdAndPost_Id(commentId, postId)
+        Comment commentOld = commentRepository.findByIdAndPostId(commentId, postId)
                 .orElseThrow(() -> new ResourceNotFoundException("comment" + commentId + "not found"));
         commentOld.setContent(comment.getContent());
         commentRepository.save(commentOld);
-        return commentRepository.findAllByPost_Id(postId);
+        return commentRepository.findAllByPostId(postId);
     }
 
     @DeleteMapping("/{postId}/comments/{commentId}")
     public void deleteComment(@PathVariable Long postId,
                               @PathVariable Long commentId) {
-        Comment comment = commentRepository.findByIdAndPost_Id(commentId, postId)
+        Comment comment = commentRepository.findByIdAndPostId(commentId, postId)
                 .orElseThrow(() -> new ResourceNotFoundException("comment" + commentId + "not found"));
         commentRepository.delete(comment);
     }
