@@ -10,8 +10,8 @@ import java.util.Optional;
 public interface CommentRepository extends CrudRepository<Comment, Long> {
 
     // BEGIN
-    Iterable<Comment> findAllByPost_Id(Long postId);
+    Iterable<Comment> findAllByPostId(Long postId);
 
-    Optional<Comment> findByIdAndPost_Id(Long commentId, Long postId);
+    Optional<Comment> findByIdAndPostId(Long commentId, Long postId);
     // END
 }
