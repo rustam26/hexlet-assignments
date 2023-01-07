@@ -1,0 +1,10 @@
+users:
+  - id: 1
+    username: Alexis
+    email: alexis@gmail.com
+    password: $2a$12$lP1HdpYa4yT./wnilPzf0OoxaVHJunEkkxw4SwkYL5obPjq.fG8Xy
+
+  - id: 2
+    username: Johny_123
+    email: john@yahoo.com
+    password: $2a$12$aNS5pdHzAgOcYBwL3dj/neih15F33OqNAP7CvGNRnxOk0nC6FJSr.
