@@ -1,0 +1,27 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:pro="http://www.liquibase.org/xml/ns/pro" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-3.8.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+    <changeSet author="root (generated)" id="1635859741884-1">
+        <createSequence sequenceName="hibernate_sequence"/>
+    </changeSet>
+    <changeSet author="root (generated)" id="1635859741884-3">
+        <createTable tableName="posts">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints primaryKey="true" primaryKeyName="articlesPK"/>
+            </column>
+            <column name="title" type="VARCHAR(255)"/>
+            <column name="body" type="CLOB"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="root (generated)" id="1635859741884-2">
+        <createTable tableName="comments">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints primaryKey="true" primaryKeyName="postsPK"/>
+            </column>
+            <column name="content" type="CLOB"/>
+            <column name="post_id" type="BIGINT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="root (generated)" id="1635859741884-4">
+        <addForeignKeyConstraint baseColumnNames="post_id" baseTableName="comments" constraintName="FKy5kkohbk00g0w88fi05k2hcw" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="posts" validate="true"/>
+    </changeSet>
+</databaseChangeLog>

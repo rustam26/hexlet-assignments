@@ -1,0 +1,37 @@
+posts:
+  - id: 1
+    title: The Moving Toyshop
+    body: Why is it that when one man builds a wall
+
+  - id: 2
+    title: Death Be Not Proud
+    body: Laughter is poison to fear
+
+  - id: 3
+    title: Dying of the Light
+    body: Give me honorable enemies rather than ambitious ones, and I`ll sleep more easily by night.
+
+  - id: 4
+    title: The Monkey`s Raincoat
+    body: Do the dead frighten you?
+
+  - id: 5
+    title: The World, the Flesh and the Devil
+    body: When the snows fall and the white winds blow, the lone wolf dies but the pack survives
+
+comments:
+  - id: 1
+    content: Great Post!
+    post_id: 1
+  - id: 2
+    content: Awesome!
+    post_id: 1
+  - id: 3
+    content: It was very useful
+    post_id: 2
+  - id: 4
+    content: So so
+    post_id: 2
+  - id: 5
+    content: Rubbish!
+    post_id: 2
