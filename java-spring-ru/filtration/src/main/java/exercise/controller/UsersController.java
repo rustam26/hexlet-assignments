@@ -22,7 +22,8 @@ public class UsersController {
 
     // BEGIN
     @GetMapping
-    public Iterable<User> getUsers(@RequestParam(required = false) String firstName, @RequestParam(required = false) String lastName) {
+    public Iterable<User> getUsers(@RequestParam(required = false) String firstName,
+                                   @RequestParam(required = false) String lastName) {
         if (firstName != null && lastName != null) {
             return userRepository.findAll(QUser.user.firstName.containsIgnoreCase(firstName)
                     .and(QUser.user.lastName.containsIgnoreCase(lastName)));
