@@ -25,5 +25,7 @@ spring:
         web-allow-others: true
 
 # BEGIN
-
+springdoc:
+  swagger-ui:
+    path: /swagger.html
 # END
