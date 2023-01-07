@@ -9,6 +9,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
+
 import static org.springframework.http.HttpMethod.POST;
 
 @Configuration
@@ -21,10 +22,19 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     // Переопределяет схему аутентификации
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.csrf().disable();
+        http.csrf()
+                .disable();
 
         // BEGIN
-        
+        http.authorizeRequests()
+                .antMatchers("/")
+                .permitAll()
+                .antMatchers(POST, "/users")
+                .permitAll()
+                .anyRequest()
+                .authenticated()
+                .and()
+                .httpBasic();
         // END
     }
 
