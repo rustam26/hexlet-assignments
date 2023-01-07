@@ -1,0 +1,1 @@
+web: sh build/install/authentication/bin/authentication
