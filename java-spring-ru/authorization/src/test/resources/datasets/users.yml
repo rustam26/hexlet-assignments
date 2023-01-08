@@ -1,0 +1,12 @@
+users:
+  - id: 1
+    username: Alexis
+    email: alexis@gmail.com
+    password: $2a$12$lP1HdpYa4yT./wnilPzf0OoxaVHJunEkkxw4SwkYL5obPjq.fG8Xy
+    role: 1 # user
+
+  - id: 2
+    username: Admin
+    email: admin@gmail.com
+    password: $2a$12$ORjUG60Jce0O1gZUZB48u.uEtdqtFVGEd/d068jxUIELKAr8e6ZUC
+    role: 0 # admin
