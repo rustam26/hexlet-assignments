@@ -38,5 +38,6 @@ testlogger {
 }
 
 // BEGIN
-
+task stage(dependsOn: ['clean', 'installDist'])
+installDist.mustRunAfter clean
 // END

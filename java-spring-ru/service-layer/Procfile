@@ -1,0 +1,1 @@
+web: sh build/install/service-layer/bin/service-layer
