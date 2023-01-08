@@ -1,0 +1,16 @@
+cities:
+  - id: 1
+    name: Moscow
+    country: Russia
+  - id: 2
+    name: Berlin
+    country: Germany
+  - id: 3
+    name: Bagdad
+    country: Iraque
+  - id: 4
+    name: Marakesh
+    country: Marokko
+  - id: 5
+    name: Buharest
+    country: Romania

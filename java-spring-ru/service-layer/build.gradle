@@ -1,0 +1,42 @@
+plugins {
+  id 'org.springframework.boot' version '2.5.5'
+  id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+  id 'application'
+  id 'com.adarshr.test-logger' version '3.0.0'
+}
+
+application {
+  mainClass = 'exercise.App'
+}
+
+repositories {
+  mavenCentral()
+}
+
+dependencies {
+  implementation 'org.springframework.boot:spring-boot-starter-web'
+  implementation 'org.springframework.data:spring-data-commons'
+  testImplementation 'org.springframework.boot:spring-boot-starter-test'
+  implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+  runtimeOnly 'com.h2database:h2:1.4.200'
+  implementation 'org.liquibase:liquibase-core'
+  compileOnly 'org.projectlombok:lombok'
+  annotationProcessor 'org.projectlombok:lombok'
+  testImplementation 'com.github.database-rider:rider-junit5:1.32.0'
+  implementation 'com.fasterxml.jackson.core:jackson-databind:2.13.0'
+  implementation 'com.fasterxml.jackson.core:jackson-core:2.13.0'
+  testImplementation 'org.apache.commons:commons-lang3:3.12.0'
+
+}
+
+test {
+  useJUnitPlatform()
+}
+
+testlogger {
+  showStandardStreams = true
+}
+
+// BEGIN
+
+// END
