@@ -1,0 +1,1 @@
+web: sh build/install/authorization/bin/authorization

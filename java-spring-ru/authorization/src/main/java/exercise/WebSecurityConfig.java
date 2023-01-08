@@ -14,7 +14,6 @@ import static org.springframework.http.HttpMethod.POST;
 import static org.springframework.http.HttpMethod.GET;
 import static org.springframework.http.HttpMethod.DELETE;
 
-import exercise.model.UserRole;
 
 @Configuration
 @EnableWebSecurity
@@ -34,14 +33,14 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
         // BEGIN
         http.authorizeRequests()
-                .antMatchers("/")
-                .permitAll()
                 .antMatchers(POST, "/users")
                 .permitAll()
                 .antMatchers(GET, "/users", "/users/{id}")
                 .hasAnyRole("ADMIN", "USER")
                 .antMatchers(DELETE, "/users/{id}")
                 .hasRole("ADMIN")
+                .antMatchers("/")
+                .permitAll()
                 .and()
                 .httpBasic();
         // END
