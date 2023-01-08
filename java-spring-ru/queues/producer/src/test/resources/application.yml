@@ -1,0 +1,14 @@
+spring:
+  # База данных для тестов
+  datasource:
+    # В тестах спользуем базу данных Н2 в памяти
+    url: jdbc:h2:mem:db
+    username: sa
+    password:
+
+  # Используем тот же файл миграции, что и для базы данных в приложении
+  liquibase:
+    change-log: classpath:db/changelog/changelog-master.xml
+
+  rabbitmq:
+    port: 5611

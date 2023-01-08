@@ -1,0 +1,19 @@
+task start {
+  dependsOn gradle.includedBuild('producer').task(':bootRun')
+  dependsOn gradle.includedBuild('consumer').task(':bootRun')
+}
+
+task test {
+  dependsOn gradle.includedBuild('producer').task(':test')
+  dependsOn gradle.includedBuild('consumer').task(':test')
+}
+
+task clean {
+  dependsOn gradle.includedBuild('producer').task(':clean')
+  dependsOn gradle.includedBuild('consumer').task(':clean')
+}
+
+task testClasses {
+  dependsOn gradle.includedBuild('producer').task(':testClasses')
+  dependsOn gradle.includedBuild('consumer').task(':testClasses')
+}
