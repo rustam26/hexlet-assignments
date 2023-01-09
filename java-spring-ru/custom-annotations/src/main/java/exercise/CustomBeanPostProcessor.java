@@ -47,6 +47,7 @@ public class CustomBeanPostProcessor implements BeanPostProcessor {
                                     method.getName(), Arrays.toString(args));
                             case "debug" -> LOGGER.debug("Was called method: {}() with arguments: {}",
                                     method.getName(), Arrays.toString(args));
+                            default -> LOGGER.debug("default");
                         }
                         return method.invoke(calculatorImpl, args);
                     }
