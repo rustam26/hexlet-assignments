@@ -19,17 +19,17 @@ public class MyApplicationConfig {
     public Daytime getMorning() {
         LocalTime localTimeNow = LocalDateTime.now()
                 .toLocalTime();
-        if (localTimeNow.isAfter(LocalTime.of(6, 0, 0)) &&
-                localTimeNow.isBefore(LocalTime.of(12, 0, 0))) {
+        if (localTimeNow.isAfter(LocalTime.of(6, 0, 0))
+                && localTimeNow.isBefore(LocalTime.of(12, 0, 0))) {
             return new Morning();
-        } else if (localTimeNow.isAfter(LocalTime.of(12, 0, 0)) &&
-                localTimeNow.isBefore(LocalTime.of(18, 0, 0))) {
+        } else if (localTimeNow.isAfter(LocalTime.of(12, 0, 0))
+                && localTimeNow.isBefore(LocalTime.of(18, 0, 0))) {
             return new Day();
-        } else if (localTimeNow.isAfter(LocalTime.of(18, 0, 0)) &&
-                localTimeNow.isBefore(LocalTime.of(23, 0, 0))) {
+        } else if (localTimeNow.isAfter(LocalTime.of(18, 0, 0))
+                && localTimeNow.isBefore(LocalTime.of(23, 0, 0))) {
             return new Evening();
-        } else if (localTimeNow.isAfter(LocalTime.of(23, 0, 0)) &&
-                localTimeNow.isBefore(LocalTime.of(6, 0, 0))) {
+        } else if (localTimeNow.isAfter(LocalTime.of(23, 0, 0))
+                && localTimeNow.isBefore(LocalTime.of(6, 0, 0))) {
             return new Night();
         }
         return null;
